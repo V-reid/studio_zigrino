@@ -1,37 +1,37 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
+import BentoGrid from "./pages/BentoSection/BentoGrid";
+import AboutUs from "./pages/aboutUs/AboutUs";
+import { motion } from "framer-motion";
+import Footer from "./pages/Footer";
+import Contacts from "./pages/Contacts/Contacts";
+import Hero from "./pages/Hero";
+import Header from "./pages/header";
 
 function App() {
-	const [count, setCount] = useState(0);
-
 	return (
-		<>
-			<div className="bg-red-400">
-				<a href="https://vitejs.dev" target="_blank">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img
-						src={reactLogo}
-						className="logo react"
-						alt="React logo"
-					/>
-				</a>
+		<div className="">
+			<div id="hero" className="h-screen">
+				<Hero />
 			</div>
-			<h1>Vite + React</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
+			<div id="aboutus">
+				<AboutUs />
 			</div>
-			<p className="read-the-docs">
-				Click on the Vite and React logos to learn more
-			</p>
-		</>
+			{/* <motion.div
+				whileInView={{ y: 0, opacity: 100 }}
+				initial={{ y: 10, opacity: 0 }}
+				transition={{ ease: "easeIn", duration: 1.5, delay: 0.2 }}
+			> */}
+			<div id="service">
+				<BentoGrid />
+			</div>
+			<div id="contacts">
+				<Contacts />
+			</div>
+
+			<Footer />
+			{/* </motion.div> */}
+		</div>
 	);
 }
 

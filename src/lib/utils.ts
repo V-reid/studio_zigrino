@@ -1,7 +1,9 @@
+import { clsx, type ClassValue } from "clsx";
 import { useState } from "react";
+import { twMerge } from "tailwind-merge";
 
-export function classNames(...classes: string[]) {
-	return classes.filter(Boolean).join(" ");
+export function cn(...inputs: ClassValue[]) {
+	return twMerge(clsx(inputs));
 }
 
 export function useHover() {
@@ -14,4 +16,10 @@ export function useHover() {
 	};
 
 	return { hover: hover, onEnterHover, onExitHover, hoverUtils };
+}
+
+export function useDisclosure() {
+	const [open, setOpen] = useState(false);
+
+	return { open, onOpen: () => setOpen(true), onClose: () => setOpen(false) };
 }
