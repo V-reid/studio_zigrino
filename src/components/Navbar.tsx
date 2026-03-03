@@ -146,16 +146,6 @@ export function Navbar() {
 							{link.name}
 						</a>
 					))}
-					<Button
-						className="w-full bg-primary text-primary-foreground"
-						onClick={() => {
-							const element = document.querySelector("#contact");
-							element?.scrollIntoView({ behavior: "smooth" });
-							setIsMobileMenuOpen(false);
-						}}
-					>
-						Book Consultation
-					</Button>
 				</div>
 			)}
 		</nav>
