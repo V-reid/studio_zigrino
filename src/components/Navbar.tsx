@@ -30,9 +30,9 @@ export function Navbar() {
 	// }, []);
 
 	const navLinks = [
-		{ name: "Servizi", href: "/#services" },
-		{ name: "Chi siamo", href: "/#about" },
-		{ name: "Contatti", href: "/#contact" },
+		{ name: "Servizi", href: "#services" },
+		{ name: "Chi siamo", href: "#about" },
+		{ name: "Contatti", href: "#contact" },
 	];
 
 	const scrollToSection = (
@@ -41,6 +41,8 @@ export function Navbar() {
 	) => {
 		e.preventDefault();
 		const element = document.querySelector(id);
+		console.log(element);
+
 		if (element) {
 			element.scrollIntoView({ behavior: "smooth" });
 			setIsMobileMenuOpen(false);
@@ -60,7 +62,7 @@ export function Navbar() {
 				{/* Logo */}
 				<div
 					onClick={() => window.scrollTo(0, 0)}
-					// onClick={(e) => scrollToSection(e, "#hero")}
+					//onClick={(e) => scrollToSection(e, "#hero")}
 					className="flex items-center gap-2 group cursor-pointer"
 				>
 					<div className="text-primary-foreground p-2 rounded-lg group-hover:bg-primary/90 transition-colors">
@@ -98,10 +100,10 @@ export function Navbar() {
 					{navLinks.map((link) => (
 						<a
 							key={link.name}
-							href={link.href}
-							// onClick={(e) => scrollToSection(e, link.href)}
+							//href={link.href}
+							onClick={(e) => scrollToSection(e, link.href)}
 							className={cn(
-								"text-sm font-medium transition-colors hover:text-accent relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full",
+								"text-sm font-medium cursor-pointer transition-colors hover:text-accent relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full",
 								isScrolled
 									? "text-foreground"
 									: "text-white/90",
@@ -139,8 +141,8 @@ export function Navbar() {
 					{navLinks.map((link) => (
 						<a
 							key={link.name}
-							href={link.href}
-							// onClick={(e) => scrollToSection(e, link.href)}
+							// href={link.href}
+							onClick={(e) => scrollToSection(e, link.href)}
 							className="text-foreground hover:text-primary font-medium p-2 rounded-md hover:bg-muted/50 transition-colors"
 						>
 							{link.name}
