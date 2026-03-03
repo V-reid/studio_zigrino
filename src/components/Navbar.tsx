@@ -140,7 +140,7 @@ export function Navbar() {
 						<a
 							key={link.name}
 							href={link.href}
-							onClick={(e) => scrollToSection(e, link.href)}
+							// onClick={(e) => scrollToSection(e, link.href)}
 							className="text-foreground hover:text-primary font-medium p-2 rounded-md hover:bg-muted/50 transition-colors"
 						>
 							{link.name}
