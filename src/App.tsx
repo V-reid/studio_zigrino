@@ -30,7 +30,7 @@ let router = createHashRouter(
 			// loader: loadRootData,
 		},
 	],
-	{ basename: "studio_zigrino" },
+	{ basename: "/studio_zigrino" },
 );
 
 function App() {
