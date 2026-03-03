@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
+
 export default function Footer() {
 	return (
 		<footer className="bg-primary text-white pt-20 pb-10 border-t border-white/10">
@@ -10,7 +11,7 @@ export default function Footer() {
 						<div className="flex items-center gap-2 mb-6">
 							<div className=" p-2 rounded-lg">
 								<img
-									src="/logo.png"
+									src="logo.png"
 									alt="logo dello studio"
 									className="size-12"
 								/>

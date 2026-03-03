@@ -67,7 +67,7 @@ export function Navbar() {
 					<div className="text-primary-foreground p-2 rounded-lg group-hover:bg-primary/90 transition-colors">
 						{/* <Scale className="w-6 h-6" /> */}
 						<img
-							src="/logo.png"
+							src="logo.png"
 							alt="logo dello studio"
 							className="size-12"
 						/>
