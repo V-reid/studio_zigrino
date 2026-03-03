@@ -38,7 +38,7 @@ export function Navbar() {
 
 	const scrollToSection = (
 		e: React.MouseEvent<HTMLAnchorElement>,
-		id: string
+		id: string,
 	) => {
 		e.preventDefault();
 		const element = document.querySelector(id);
@@ -54,15 +54,15 @@ export function Navbar() {
 				"fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
 				isScrolled
 					? "bg-white/95 backdrop-blur-md shadow-sm border-border/50 py-3"
-					: "bg-transparent border-transparent py-5"
+					: "bg-transparent border-transparent py-5",
 			)}
 		>
 			<div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
 				{/* Logo */}
-				<Link
-					to="/#"
+				<div
+					onClick={() => window.scrollTo(0, 0)}
 					// onClick={(e) => scrollToSection(e, "#hero")}
-					className="flex items-center gap-2 group"
+					className="flex items-center gap-2 group cursor-pointer"
 				>
 					<div className="text-primary-foreground p-2 rounded-lg group-hover:bg-primary/90 transition-colors">
 						{/* <Scale className="w-6 h-6" /> */}
@@ -76,7 +76,7 @@ export function Navbar() {
 						<span
 							className={cn(
 								"text-lg font-display font-bold leading-none tracking-wide",
-								isScrolled ? "text-foreground" : "text-white"
+								isScrolled ? "text-foreground" : "text-white",
 							)}
 						>
 							Studio Zigrino
@@ -86,28 +86,30 @@ export function Navbar() {
 								"text-xs font-medium tracking-[0.2em] uppercase",
 								isScrolled
 									? "text-muted-foreground"
-									: "text-white/80"
+									: "text-white/80",
 							)}
 						>
 							Torino, Italia
 						</span>
 					</div>
-				</Link>
+				</div>
 
 				{/* Desktop Nav */}
 				<div className="hidden md:flex items-center gap-8">
 					{navLinks.map((link) => (
-						<Link
+						<a
 							key={link.name}
-							to={link.href}
+							href={link.href}
 							// onClick={(e) => scrollToSection(e, link.href)}
 							className={cn(
 								"text-sm font-medium transition-colors hover:text-accent relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full",
-								isScrolled ? "text-foreground" : "text-white/90"
+								isScrolled
+									? "text-foreground"
+									: "text-white/90",
 							)}
 						>
 							{link.name}
-						</Link>
+						</a>
 					))}
 					{/* <Button
 						className="bg-accent hover:bg-accent/90 text-white font-medium px-6"
@@ -124,7 +126,7 @@ export function Navbar() {
 				<button
 					className={cn(
 						"md:hidden p-2 rounded-md",
-						isScrolled ? "text-foreground" : "text-white"
+						isScrolled ? "text-foreground" : "text-white",
 					)}
 					onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 				>

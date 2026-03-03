@@ -96,7 +96,7 @@ function Hero() {
 						>
 							Richiedi un incontro gratuito
 						</Button>
-						<a
+						{/* <a
 							href="tel:+393926189800"
 							// size="lg"
 							// variant="outline"
@@ -104,7 +104,7 @@ function Hero() {
 						>
 							<Phone className="mr-2 h-5 w-5" />
 							<div>Parla con noi</div>
-						</a>
+						</a> */}
 					</div>
 				</motion.div>
 			</div>
@@ -393,7 +393,7 @@ function Contact() {
 							Parliamo del tuo caso.
 						</h2>
 						<p className="text-lg text-muted-foreground mb-12">
-							Inviaci un messaggio o chiamaci. <br />
+							Inviaci un messaggio. <br />
 							Il primo passo verso una soluzione è il dialogo.
 						</p>
 
@@ -439,27 +439,6 @@ function Contact() {
 											studiozigrino@pec.it
 										</a>
 									</div>
-								</div>
-							</div>
-
-							<div className="flex items-start gap-4">
-								<div className="w-12 h-12 rounded-lg bg-white shadow-sm border border-border flex items-center justify-center shrink-0 text-primary">
-									<Phone className="w-6 h-6" />
-								</div>
-								<div>
-									<h4 className="text-lg font-bold text-foreground mb-1 flex gap-1 items-end">
-										Chiamaci
-										<span className=" text-gray-600 text-base font-semibold">
-											(lunedì-venerdì, 9:00 - 18:00)
-										</span>
-									</h4>
-									<a
-										className="text-muted-foreground underline"
-										href="tel:+393926189800"
-									>
-										+39 392 618 9800
-										<br />
-									</a>
 								</div>
 							</div>
 						</div>
