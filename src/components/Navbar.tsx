@@ -128,7 +128,7 @@ export function Navbar() {
 
 			{/* Mobile Menu */}
 			{isMobileMenuOpen && (
-				<div className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg p-4 md:hidden flex flex-col gap-4 animate-in slide-in-from-top-5">
+				<div className="absolute top-full left-0 right-0 bg-background bg-primary/20 rounded border-b border-border shadow-lg p-4 md:hidden flex flex-col gap-4 animate-in slide-in-from-top-5">
 					{navLinks.map((link) => (
 						<a
 							key={link.name}
