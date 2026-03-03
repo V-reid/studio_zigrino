@@ -3,7 +3,6 @@ import {
 	Route,
 	createBrowserRouter,
 	RouterProvider,
-	createHashRouter,
 } from "react-router";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -11,8 +10,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/not-found";
+import Privacy from "@/pages/Privacy";
 
-let router = createHashRouter(
+let router = createBrowserRouter(
 	[
 		{
 			path: "/",
@@ -30,7 +30,7 @@ let router = createHashRouter(
 			// loader: loadRootData,
 		},
 	],
-	{ basename: "/studio_zigrino" },
+	{ basename: "studio_zigrino" },
 );
 
 function App() {
