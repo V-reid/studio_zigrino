@@ -63,7 +63,7 @@ export function Navbar() {
 				<div
 					onClick={() => window.scrollTo(0, 0)}
 					//onClick={(e) => scrollToSection(e, "#hero")}
-					className="flex items-center gap-2 group cursor-pointer"
+					className="flex items-center gap-2 group cursor-pointer bg-primary/20 px-2 rounded"
 				>
 					<div className="text-primary-foreground p-2 rounded-lg group-hover:bg-primary/90 transition-colors">
 						{/* <Scale className="w-6 h-6" /> */}
@@ -96,7 +96,7 @@ export function Navbar() {
 				</div>
 
 				{/* Desktop Nav */}
-				<div className="hidden md:flex items-center gap-8">
+				<div className="hidden md:flex items-center gap-8 bg-primary/20 px-4 py-2 rounded">
 					{navLinks.map((link) => (
 						<a
 							key={link.name}
@@ -112,15 +112,6 @@ export function Navbar() {
 							{link.name}
 						</a>
 					))}
-					{/* <Button
-						className="bg-accent hover:bg-accent/90 text-white font-medium px-6"
-						onClick={() => {
-							const element = document.querySelector("#contact");
-							element?.scrollIntoView({ behavior: "smooth" });
-						}}
-					>
-						Consulenza Gratuita
-					</Button> */}
 				</div>
 
 				{/* Mobile Toggle */}
