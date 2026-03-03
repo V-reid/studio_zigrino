@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router";
 import { Menu, X, Scale } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -7,28 +6,28 @@ import { Button } from "@/components/ui/button";
 export function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-	const location = useLocation();
+
 	const [lastPath, setLastPath] = useState("");
 
-	useEffect(() => {
-		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 20);
-		};
-		window.addEventListener("scroll", handleScroll);
-		if (location.pathname != lastPath) {
-			if (location.hash) {
-				const element = document.querySelector(location.hash);
-				if (element)
-					element.scrollIntoView({
-						behavior: "smooth", // 'auto' for instant jump, 'smooth' for animation
-						block: "start", // Align element to top of view
-					});
-				else window.scrollTo(0, 0);
-			}
-			setLastPath(location.pathname);
-		}
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
+	// useEffect(() => {
+	// 	const handleScroll = () => {
+	// 		setIsScrolled(window.scrollY > 20);
+	// 	};
+	// 	window.addEventListener("scroll", handleScroll);
+	// 	if (location.pathname != lastPath) {
+	// 		if (location.hash) {
+	// 			const element = document.querySelector(location.hash);
+	// 			if (element)
+	// 				element.scrollIntoView({
+	// 					behavior: "smooth", // 'auto' for instant jump, 'smooth' for animation
+	// 					block: "start", // Align element to top of view
+	// 				});
+	// 			else window.scrollTo(0, 0);
+	// 		}
+	// 		setLastPath(location.pathname);
+	// 	}
+	// 	return () => window.removeEventListener("scroll", handleScroll);
+	// }, []);
 
 	const navLinks = [
 		{ name: "Servizi", href: "/#services" },

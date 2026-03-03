@@ -309,7 +309,7 @@ function About() {
 						<div className=" relative aspect-[4/3] rounded-2xl overflow-hidden ">
 							{/* Unsplash: Professional lawyer meeting */}
 							<img
-								src="me.jpeg"
+								src="./me.jpeg"
 								alt="Lawyer consulting with client"
 								className="w-[50%]  h-[100%] max-sm:w-[80%] max-sm:h-full  object-cover hover:scale-105 transition-transform duration-700 rounded-3xl  overflow-hidden  sm:absolute sm:top-0 sm:left-[40%] max-sm:mx-auto shadow-xl"
 							/>
