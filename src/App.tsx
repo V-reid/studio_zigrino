@@ -12,23 +12,26 @@ import Home from "@/pages/Home";
 import NotFound from "@/pages/not-found";
 import Privacy from "@/pages/Privacy";
 
-let router = createBrowserRouter([
-	{
-		path: "/",
-		Component: Home,
-		// loader: loadRootData,
-	},
-	// {
-	// 	path: "/privacy",
-	// 	Component: Privacy,
-	// 	// loader: loadRootData,
-	// },
-	{
-		path: "/*",
-		Component: NotFound,
-		// loader: loadRootData,
-	},
-]);
+let router = createBrowserRouter(
+	[
+		{
+			path: "/",
+			Component: Home,
+			// loader: loadRootData,
+		},
+		// {
+		// 	path: "/privacy",
+		// 	Component: Privacy,
+		// 	// loader: loadRootData,
+		// },
+		{
+			path: "/*",
+			Component: NotFound,
+			// loader: loadRootData,
+		},
+	],
+	{ basename: "/studio_zigrino" },
+);
 
 function App() {
 	return (
