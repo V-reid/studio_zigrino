@@ -135,7 +135,7 @@ function Hero2() {
 										</div>
 									</div>
 								</div>
-								<div className="mt-14 flex justify-end gap-8 max-lg:gap-0  sm:-mt-44 sm:justify-start  lg:mt-0  lg:pl-0 max-lg:justify-center px-[10rem]  w-full">
+								<div className="mt-14 flex justify-end gap-8 max-lg:gap-0  sm:-mt-44 sm:justify-start  lg:mt-24  lg:pl-0 max-lg:justify-center px-[10rem]  w-full">
 									<div className="ml-auto w-44 max-lg:hidden flex-none space-y-8 pt-32  sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80 ">
 										<div className="relative">
 											<img
