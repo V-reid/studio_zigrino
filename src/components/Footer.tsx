@@ -9,13 +9,13 @@ export default function Footer() {
 						<div className="flex items-center gap-2 mb-6">
 							<div className=" p-2 rounded-lg">
 								<img
-									src="logo.png"
+									src="studio_zigrino/logo.png"
 									alt="logo dello studio"
 									className="size-12"
 								/>
 							</div>
 							<span className="text-xl font-display font-bold">
-								Studio Zigrino
+								Studio Zigrino S.r.l.
 							</span>
 						</div>
 						<ul>
@@ -25,17 +25,26 @@ export default function Footer() {
 								</div>
 								<div className="font-bold">13179140010</div>
 							</li>
-							<li className="flex gap-2">
+							{/* <li className="flex gap-2">
 								<div className="text-slate-400">
 									Ragione Sociale
 								</div>
 								<div className="font-bold">
 									STUDIO ZIGRINO SRL
 								</div>
+							</li> */}
+							<li className="flex gap-2">
+								<div className="text-slate-400">Numero REA</div>
+								<div className="font-bold">TO - 1344638</div>
 							</li>
 							<li className="flex gap-2">
-								<div className="text-slate-400">Rea</div>
-								<div className="font-bold">1344638</div>
+								<div className="text-slate-400">
+									Sede legale
+								</div>
+								<div className="font-bold w-[40%] text-justify">
+									Corso Francesco Ferrucci 101 10138 Torino
+									(TO), Italia
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -122,12 +131,9 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
-					<p>
-						© {new Date().getFullYear()} Studio Zigrino Torino.
-						Tutti i diritti riservati.
-					</p>
-					<p>Designed with precision.</p>
+				<div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-white/40">
+					© {new Date().getFullYear()} Studio Zigrino S.r.l. con unico
+					socio. Tutti i diritti riservati.
 				</div>
 			</div>
 		</footer>

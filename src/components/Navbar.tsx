@@ -9,6 +9,8 @@ export function Navbar() {
 
 	const [lastPath, setLastPath] = useState("");
 
+	const bg = "bg-slate-700";
+
 	// useEffect(() => {
 	// 	const handleScroll = () => {
 	// 		setIsScrolled(window.scrollY > 20);
@@ -58,19 +60,22 @@ export function Navbar() {
 					: "bg-transparent border-transparent py-5",
 			)}
 		>
-			<div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+			<div className="container mx-auto px-4 md:px-6 flex items-center justify-end">
 				{/* Logo */}
 				<div
 					onClick={() => window.scrollTo(0, 0)}
 					//onClick={(e) => scrollToSection(e, "#hero")}
-					className="flex items-center gap-2 group cursor-pointer bg-primary/20 px-2 rounded"
+					className={cn(
+						"hidden  items-center gap-2 group cursor-pointer bg-primary/20 px-2 rounded ",
+						bg,
+					)}
 				>
 					<div className="text-primary-foreground p-2 rounded-lg group-hover:bg-primary/90 transition-colors">
 						{/* <Scale className="w-6 h-6" /> */}
 						<img
-							src="logo.png"
+							src="/studio_zigrino/logo.png"
 							alt="logo dello studio"
-							className="size-12"
+							className="size-8"
 						/>
 					</div>
 					<div className="flex flex-col">
@@ -96,7 +101,12 @@ export function Navbar() {
 				</div>
 
 				{/* Desktop Nav */}
-				<div className="hidden md:flex items-center gap-8 bg-primary/20 px-4 py-2 rounded">
+				<div
+					className={cn(
+						"hidden md:flex items-center gap-8  px-4 py-2 rounded",
+						bg,
+					)}
+				>
 					{navLinks.map((link) => (
 						<a
 							key={link.name}
@@ -118,6 +128,7 @@ export function Navbar() {
 				<button
 					className={cn(
 						"md:hidden p-2 rounded-md",
+						bg,
 						isScrolled ? "text-foreground" : "text-white",
 					)}
 					onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -128,13 +139,13 @@ export function Navbar() {
 
 			{/* Mobile Menu */}
 			{isMobileMenuOpen && (
-				<div className="absolute top-full left-0 right-0 bg-background bg-primary/20 rounded border-b border-border shadow-lg p-4 md:hidden flex flex-col gap-4 animate-in slide-in-from-top-5">
+				<div className="absolute top-full left-0 right-0 bg-background  rounded border-b border-border shadow-lg p-4 md:hidden flex flex-col gap-4 animate-in slide-in-from-top-5">
 					{navLinks.map((link) => (
 						<a
 							key={link.name}
 							// href={link.href}
 							onClick={(e) => scrollToSection(e, link.href)}
-							className="text-foreground hover:text-primary font-medium p-2 rounded-md hover:bg-muted/50 transition-colors"
+							className="text-foreground hover:text-primary font-medium   p-2 rounded-md hover:bg-muted/50 transition-colors"
 						>
 							{link.name}
 						</a>

@@ -10,4 +10,5 @@ export default defineConfig({
 		},
 	},
 	base: "studio_zigrino",
+	server: { host: true },
 });
