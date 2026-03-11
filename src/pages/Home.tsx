@@ -144,7 +144,7 @@ function Hero2() {
 										<div className="relative">
 											<img
 												alt="incontro con il cliente "
-												src="studio_zigrino/h1.webp"
+												src="/studio_zigrino/h1.webp"
 												className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg dark:bg-gray-700/5"
 											/>
 											<div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10" />
@@ -154,7 +154,7 @@ function Hero2() {
 										<div className="relative">
 											<img
 												alt="lavoro in gruppo"
-												src="studio_zigrino/h2.webp"
+												src="/studio_zigrino/h2.webp"
 												className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg dark:bg-gray-700/5"
 											/>
 											<div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10" />
@@ -172,7 +172,7 @@ function Hero2() {
 										<div className="relative">
 											<img
 												alt="incontro con la famiglia"
-												src="studio_zigrino/h3.webp"
+												src="/studio_zigrino/h3.webp"
 												className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg dark:bg-gray-700/5"
 											/>
 											<div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10" />
@@ -180,7 +180,7 @@ function Hero2() {
 										<div className="relative">
 											<img
 												alt="ragazza guarda un parco"
-												src="studio_zigrino/h4.webp"
+												src="/studio_zigrino/h4.webp"
 												className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover  shadow-lg dark:bg-gray-700/5"
 											/>
 											<div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10" />
@@ -580,7 +580,7 @@ function About() {
 						<div className=" relative aspect-[4/3] rounded-2xl overflow-hidden ">
 							{/* Unsplash: Professional lawyer meeting */}
 							<img
-								src="studio_zigrino/hero8.webp"
+								src="/studio_zigrino/hero8.webp"
 								alt="Lawyer consulting with client"
 								className="w-[60%] h-[100%] max-sm:w-[80%] max-sm:h-full  object-cover hover:scale-105 transition-transform duration-700 rounded-3xl  overflow-hidden  sm:absolute sm:top-0 sm:left-[40%] max-sm:mx-auto shadow-xl"
 							/>
