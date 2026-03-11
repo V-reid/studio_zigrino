@@ -3,6 +3,12 @@ import { Menu, X, Scale } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
+export const navLinks = [
+		{ name: "Servizi", href: "#services" },
+		{ name: "Chi siamo", href: "#about" },
+		{ name: "Contatti", href: "#contact" },
+	];
+
 export function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,11 +37,7 @@ export function Navbar() {
 	// 	return () => window.removeEventListener("scroll", handleScroll);
 	// }, []);
 
-	const navLinks = [
-		{ name: "Servizi", href: "#services" },
-		{ name: "Chi siamo", href: "#about" },
-		{ name: "Contatti", href: "#contact" },
-	];
+	
 
 	const scrollToSection = (
 		e: React.MouseEvent<HTMLAnchorElement>,

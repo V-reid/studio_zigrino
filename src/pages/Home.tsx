@@ -88,7 +88,7 @@ function Hero2() {
 						<div className="mx-auto max-w-7xl px-6 pb-32  lg:px-8 ">
 							<div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
 								<div className="relative w-full flex gap-10 flex-col lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-									<div className=" w-fit flex items-center justify-center gap-2   p-2 rounded-lg">
+									<div className=" w-fit flex items-center max-md:flex-col max-md:mx-auto justify-center gap-2   p-2 rounded-lg">
 										<img
 											src="/studio_zigrino/logo.png"
 											alt="logo dello studio"
@@ -103,12 +103,8 @@ function Hero2() {
 										</span>
 									</div>
 									<div>
-										<h1 className="text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl dark:text-white">
-											Esperti in
-											<span className="">
-												{" "}
-												analisi e supporto
-											</span>{" "}
+										<h1 className="text-pretty text-5xl  font-semibold tracking-tight text-gray-900 sm:text-7xl dark:text-white">
+											Esperti in analisi e supporto
 											strategico
 										</h1>
 										<p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none dark:text-gray-400">
@@ -120,7 +116,7 @@ function Hero2() {
 											miglioramento della situazione
 											finanziaria.
 										</p>
-										<div className="mt-10 flex items-center gap-x-6">
+										<div className="mt-10 flex items-center max-md:justify-center  gap-x-6">
 											<Button
 												size="lg"
 												className="  font-bold bg-accent hover:bg-accent/90 text-white border-none shadow-xl shadow-accent/20"
@@ -139,7 +135,7 @@ function Hero2() {
 										</div>
 									</div>
 								</div>
-								<div className="mt-14  pt-24 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+								<div className="mt-14  pt-24 max-md:pt-0 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
 									<div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
 										<div className="relative">
 											<img

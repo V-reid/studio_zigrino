@@ -27,34 +27,34 @@ export function ContactForm() {
 	const [errors, setErrors] = useState<Partial<Schema>>({});
 	const [touched, setTouched] = useState(false);
 	const onSubmit = () => {
-		let pass = true;
-		if (data.message.trim().length < 20) {
-			setErrors((prev) => ({
-				...prev,
-				message:
-					"Perfavore inserisci più dettagli riguardo la tua richiesta (minimo 20 caratteri).",
-			}));
-			pass = false;
-		} else {
-			const { message, ...rest } = errors;
-			setErrors(rest);
-		}
+		// let pass = true;
+		// setTouched(true);
+		// if (data.message.trim().length == 0) {
+		// 	setErrors((prev) => ({
+		// 		...prev,
+		// 		message: "Questo campo è obbligatorio",
+		// 	}));
+		// 	pass = false;
+		// } else {
+		// 	const { message, ...rest } = errors;
+		// 	setErrors(rest);
+		// }
 
-		if (data.name.trim().length == 0) {
-			setErrors((prev) => ({
-				...prev,
-				name: "Questo campo è obbligatorio",
-			}));
-			pass = false;
-		} else {
-			const { name, ...rest } = errors;
-			setErrors(rest);
-		}
-		setTouched(true);
-		if (pass && touched) {
-			const url = `mailto:fulminetor@gmail.com?subject=${encodeURIComponent(`Richiesta di analisi finanziaria ${data.name}`)}&body=${encodeURIComponent(data.message)}`;
-			window.open(url, "_blank");
-		}
+		// if (data.name.trim().length == 0) {
+		// 	setErrors((prev) => ({
+		// 		...prev,
+		// 		name: "Questo campo è obbligatorio",
+		// 	}));
+		// 	pass = false;
+		// } else {
+		// 	const { name, ...rest } = errors;
+		// 	setErrors(rest);
+		// }
+
+		// if (pass) {
+		const url = `mailto:fulminetor@gmail.com?subject=${encodeURIComponent(`Richiesta di analisi finanziaria ${data.name}`)}&body=${encodeURIComponent(data.message)}`;
+		window.open(url, "_blank");
+		// }
 	};
 
 	return (
@@ -127,6 +127,10 @@ export function ContactForm() {
 				<Button
 					type="submit"
 					onClick={onSubmit}
+					disabled={
+						data.message.trim().length == 0 ||
+						data.name.trim().length == 0
+					}
 					// onClick={handleSubmit(
 					// disabled={isSubmitting}
 					className="w-full h-12 text-lg font-medium bg-primary hover:bg-primary/90 shadow-lg hover:shadow-primary/20 transition-all duration-300"
