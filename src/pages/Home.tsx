@@ -39,7 +39,7 @@ function Hero2() {
 		<div className="bg-white dark:bg-gray-900">
 			<main>
 				<div className="relative isolate">
-					<svg
+					{/* <svg
 						aria-hidden="true"
 						className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)] dark:stroke-white/10"
 					>
@@ -71,7 +71,7 @@ function Hero2() {
 							height="100%"
 							strokeWidth={0}
 						/>
-					</svg>
+					</svg> */}
 					<div
 						aria-hidden="true"
 						className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
@@ -303,10 +303,10 @@ function Hero() {
 						</h1>
 
 						<p className="text-lg md:text-xl text-gray-800 mb-10 max-w-2xl max-md:text-center leading-relaxed">
-							Il nostro ruolo è guidare le imprese e i privati
-							nella analisi delle esigenze economiche e
-							nell'individuazione di soluzioni in ambito
-							creditizio volte al miglioramento della situazione
+							Il nostro ruolo è guidare privati e imprese
+							nell’analisi delle esigenze economiche e
+							nell’individuazione di soluzioni in ambito
+							creditizio, volte al miglioramento della situazione
 							finanziaria.
 						</p>
 
@@ -549,8 +549,8 @@ function Services() {
 						description="Supporto dedicato per privati e aziende in situazioni di debito, di rischio di procedure legali in arrivo o già in atto."
 						icon={ShieldCheck}
 						details={[
+							"Gestione atti ingiuntivi e/o pignoramenti",
 							"Cancellazione protesti",
-							"Gestione pignoramenti",
 							"Assistenza per segnalazioni",
 						]}
 						delay={0.2}
@@ -591,8 +591,9 @@ function About() {
 							Da quelle parole è nata un’idea professionale che va
 							oltre il semplice lavoro: un progetto costruito su
 							competenze solide, ma sostenuto da un nucleo di
-							persone che condividono valori, responsabilità e
-							attenzione autentica alla dimensione umana.
+							persone che condividono valori, senso di
+							responsabilità e attenzione autentica alla
+							dimensione umana.
 							{/* Fondato sui principi di integrità ed eccellenza, il
 							nostro studio si occupa di consulenza e
 							pianificazione finanziaria da oltre un quarto di
@@ -638,9 +639,9 @@ function About() {
 						{/* Floating Quote Card */}
 						<div className="absolute max-sm:relative sm:-bottom-6 max-sm:mt-10 sm:-left-6 md:bottom-10 max-sm:mx-auto md:-left-10 bg-white text-foreground p-6 rounded-xl shadow-xl max-w-xs border border-border">
 							<p className="text-sm font-medium italic mb-4">
-								"Lo Studio Zigrino mi ha alleggerito le giornate
-								guidandomi in una situazione in cui la mia banca
-								non è stata in grado di aiutarmi."
+								"Lo Studio Zigrino ha alleggerito le mie
+								giornate, aiutandomi passo dopo passo a
+								districarmi tra diverse problematiche."
 								{/* 								
 								 aiutato a risolvere le mi il
 								mutuo anche quando sembrava impossibile,

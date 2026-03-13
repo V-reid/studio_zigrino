@@ -54,9 +54,9 @@ export default function Footer() {
 								<div className="text-slate-400 max-md:mx-auto">
 									Sede legale
 								</div>
-								<div className="font-bold w-[40%] max-md:mx-auto text-justify">
-									Corso Francesco Ferrucci 101 10138 Torino
-									(TO), Italia
+								<div className="font-bold text-justify max-md:mx-auto text-justify">
+									Corso Francesco Ferrucci 101
+									<br /> 10138 Torino (TO), Italia
 								</div>
 							</li>
 						</ul>
